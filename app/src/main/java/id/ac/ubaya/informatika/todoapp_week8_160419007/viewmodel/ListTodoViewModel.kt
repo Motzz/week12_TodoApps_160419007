@@ -37,6 +37,16 @@ class ListTodoViewModel(application: Application):AndroidViewModel(application),
         }
     }
 
+    fun isDone(uuid: Int)
+    {
+        launch {
+            val db = buildDB(getApplication())//pemanggilan database
+            db.todoDao().updateDone(uuid)
+            todoLD.value = db.todoDao().selectIsDone()//dan select all lagi
+        }
+    }
+
+
 
 
 

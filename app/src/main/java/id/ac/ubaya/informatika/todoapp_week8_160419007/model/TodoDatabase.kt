@@ -20,7 +20,7 @@ abstract class TodoDatabase:RoomDatabase() {
                         TodoDatabase::class.java,
                         "newtododb"
         )
-            .addMigrations(MIGRATION_2_3)
+            .addMigrations(MIGRATION_1_2,MIGRATION_2_3)
             .build()
 
         operator fun invoke(context:Context) {//fungsi yang akan terpanggil jika ada sesuatu yang akan implementasi tododatabase

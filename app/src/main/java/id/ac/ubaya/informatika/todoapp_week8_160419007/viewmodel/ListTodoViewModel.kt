@@ -42,7 +42,7 @@ class ListTodoViewModel(application: Application):AndroidViewModel(application),
 
     private var job = Job()
     override val coroutineContext: CoroutineContext
-        get() = job + Dispatchers.Main
+        get() = job + Dispatchers.Main//
 
 
 }

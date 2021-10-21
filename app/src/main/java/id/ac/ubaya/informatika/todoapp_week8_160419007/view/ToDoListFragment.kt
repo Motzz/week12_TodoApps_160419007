@@ -19,7 +19,7 @@ class ToDoListFragment : Fragment() {
     private lateinit var  viewModel:ListTodoViewModel
     private var todoListAdapter:TodoListAdapter=TodoListAdapter(arrayListOf(),{ item -> doClick(item)})
 
-    fun doClick(item:Any)
+    fun doClick(item:Any)//untuk delete
     {
         viewModel.clearTask(item as Todo)
     }

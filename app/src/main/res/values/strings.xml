@@ -7,4 +7,8 @@
     <string name="todotitle">Todo Tittle</string>
     <string name="notes">Notes</string>
     <string name="createtodo">Create todo</string>
+    <string name="priority">Priority</string>
+    <string name="highpriority">High Priority</string>
+    <string name="mediumpriority">Medium priority</string>
+    <string name="lowpriority">Low Priority</string>
 </resources>

@@ -9,7 +9,9 @@ data class Todo(
         @ColumnInfo(name="title")//ini buat kalo tabel di database
         var title:String,
         @ColumnInfo(name="notes")//ini buat kalo tabel di database
-        var notes:String
+        var notes:String,
+        @ColumnInfo(name = "priority")
+        var priority:Int
 ) {
     @PrimaryKey(autoGenerate = true)
     var uuid:Int =0

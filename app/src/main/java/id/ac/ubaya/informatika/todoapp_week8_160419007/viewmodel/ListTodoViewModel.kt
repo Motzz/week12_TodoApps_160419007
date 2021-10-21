@@ -6,6 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.room.Room
 import id.ac.ubaya.informatika.todoapp_week8_160419007.model.Todo
 import id.ac.ubaya.informatika.todoapp_week8_160419007.model.TodoDatabase
+import id.ac.ubaya.informatika.todoapp_week8_160419007.util.buildDB
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -23,16 +24,15 @@ class ListTodoViewModel(application: Application):AndroidViewModel(application),
         loadingLD.value = true
         todoLoadErrorLD.value = false
         launch {
-            val db = Room.databaseBuilder(getApplication(),TodoDatabase::class.java, "newtododb").build()
+            val db = buildDB(getApplication())//pemanggilan database
             todoLD.value = db.todoDao().selectAllTodo()
         }
     }
 
     fun clearTask(todo: Todo) { //method kueri untuk delete
         launch {
-            val db = Room.databaseBuilder(getApplication(),TodoDatabase::class.java, "newtododb").build()
-            db.todoDao().deleteTodo(todo)//delete todo
-
+            val db = buildDB(getApplication())//pemanggilan database
+            db.todoDao().deleteTodo(todo)
             todoLD.value = db.todoDao().selectAllTodo()//dan select all lagi
         }
     }

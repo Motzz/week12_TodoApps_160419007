@@ -15,10 +15,21 @@
             app:destination="@id/createToDoFragment"
             app:enterAnim="@android:anim/fade_in"
             app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/actionEditTodoFragment"
+            app:destination="@id/editTodoFragment" />
     </fragment>
     <fragment
         android:id="@+id/createToDoFragment"
         android:name="id.ac.ubaya.informatika.todoapp_week8_160419007.view.CreateToDoFragment"
         android:label="fragment_create_to_do"
         tools:layout="@layout/fragment_create_to_do" />
+    <fragment
+        android:id="@+id/editTodoFragment"
+        android:name="id.ac.ubaya.informatika.todoapp_week8_160419007.view.EditTodoFragment"
+        android:label="EditTodoFragment" >
+        <argument
+            android:name="uuid"
+            app:argType="integer" />
+    </fragment>
 </navigation>

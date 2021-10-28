@@ -25,7 +25,7 @@ class ToDoListFragment : Fragment() {
     }
     fun doClicks(item:Any)//untuk delete
     {
-        viewModel.isDone(item as Int)
+        viewModel.isDone(item as Todo)
     }
 
 

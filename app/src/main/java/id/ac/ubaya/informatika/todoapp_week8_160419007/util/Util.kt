@@ -6,7 +6,7 @@ import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 import id.ac.ubaya.informatika.todoapp_week8_160419007.model.TodoDatabase
 
-val DB_NAME="tododb"
+val DB_NAME="newtododb"
 
 fun buildDB(context: Context): TodoDatabase {
     val db = Room.databaseBuilder(context,TodoDatabase::class.java, DB_NAME)

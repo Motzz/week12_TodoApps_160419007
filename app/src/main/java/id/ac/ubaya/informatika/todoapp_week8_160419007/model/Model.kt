@@ -10,7 +10,7 @@ data class Todo(
         var title:String,
         @ColumnInfo(name="notes")//ini buat kalo tabel di database
         var notes:String,
-        @ColumnInfo(name = "priority")
+        @ColumnInfo(name ="priority")
         var priority:Int,
         @ColumnInfo(name ="is_done")
         var is_done:Int

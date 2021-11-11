@@ -17,3 +17,16 @@ interface  RadioClickListener{
 interface SaveChangesListener{
     fun SaveChanges(v:View,obj: Todo)
 }
+
+//week 12
+interface ButtonAddTodoClickListener{
+    fun onButtonAddTodo(v:View)
+}
+interface DateClickListener{
+    fun onDateClick(v:View)
+}
+interface TimeClickListener{
+    fun onTimeClick(v:View)
+}
+
+

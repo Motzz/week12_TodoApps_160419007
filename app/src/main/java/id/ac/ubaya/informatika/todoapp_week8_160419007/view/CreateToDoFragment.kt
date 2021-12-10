@@ -111,21 +111,22 @@ class CreateToDoFragment : Fragment(),ButtonAddTodoClickListener ,RadioClickList
         obj.priority=v.tag.toString().toInt()
     }
 
-    override fun onDateClick(v: View) {
-        val c = Calendar.getInstance()
-        val year=c.get(Calendar.YEAR)
-        val month=c.get(Calendar.MONTH)
-        val day=c.get(Calendar.DAY_OF_MONTH)
-        activity?.let {
-            it->DatePickerDialog(it,this,year,month,day).show()
-        }
-    }
+
 
     override fun onTimeClick(v: View) {
         val c = Calendar.getInstance()
         val hour=c.get(Calendar.HOUR_OF_DAY)
         val MINUTE=c.get(Calendar.MINUTE)
         TimePickerDialog(activity,this,hour,minute,DateFormat.is24HourFormat(activity)).show()
+    }
+    override fun onDateClick(v: View) {
+        val c = Calendar.getInstance()
+        val year=c.get(Calendar.YEAR)
+        val month=c.get(Calendar.MONTH)
+        val day=c.get(Calendar.DAY_OF_MONTH)
+        activity?.let {
+                it->DatePickerDialog(it,this,year,month,day).show()
+        }
     }
 
     override fun onDateSet(view: DatePicker?, year: Int, month: Int, dayOfMonth: Int) {
